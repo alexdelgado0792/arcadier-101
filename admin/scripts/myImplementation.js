@@ -1,12 +1,12 @@
 //change this variable name
-var clientId_descriptiveName = document.currentScript.src;
+var p_descriptiveName = document.currentScript.src;
 
 //Change all class names
 function MyClassName() {
     var re = /([a-f0-9]{8}(?:-[a-f0-9]{4}){3}-[a-f0-9]{12})/i;
-    this.packageId = re.exec(clientId_descriptiveName.toLowerCase())[1];
+    this.packageId = re.exec(p_descriptiveName.toLowerCase())[1];
     this.customFieldPrefix = this.packageId.replace(/-/g, "");
-    this.packagePath = clientId_descriptiveName.replace('/scripts/myImplementation.js', '').trim();
+    this.packagePath = p_descriptiveName.replace('/scripts/myImplementation.js', '').trim();
 
     //This validation only goes if you are in plugin page
     if (document.getElementById('packageId') != null) {
